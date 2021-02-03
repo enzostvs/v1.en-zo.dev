@@ -12,7 +12,7 @@
         and
         <span class="bg-clip-text	bg-gradient-to-r from-yellow-500 via-red-400 to-yellow-500 text-fill-transparent">UI Designer</span>
       </h1>
-      <canvas id="canvas3d" class="mx-auto w-full mt-6"></canvas>
+      <!-- <canvas id="canvas3d" class="mx-auto w-full mt-6"></canvas> -->
     </div>
   </div>
 </template>
