@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/CircularStd-Book.woff2") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/CircularStd-Medium.woff") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/CircularStd-Bold.woff") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/CircularStd-Black.woff") format("truetype");
+  font-weight: 700;
+}
+
+$futura: 'Futura';
+
+.futura {
+  font-family: 'Futura';
+}
+
+body {
+  @apply bg-white;
+  @apply m-0;
+  @apply futura;
+  cursor: none;
+}
+
+
+.text-fill-transparent {
+  -webkit-text-fill-color: transparent;
+}
