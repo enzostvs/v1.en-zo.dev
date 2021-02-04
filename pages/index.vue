@@ -5,6 +5,7 @@
         <img :src="require(`~/assets/images/avatar_${random}.svg`)" class="w-16" alt="Memoji Enzo">
       </div>
       <p class="text-2xl font-medium mt-10 mb-5">Hi, I'm Enzo&nbsp;👋</p>
+      <p class="text-medium text-gray-300">Work In Progress</p>
       <h1 class="text-6xl font-bold leading-tight">
         Front-End
         <span class="bg-clip-text	bg-gradient-to-r from-indigo-500 via-purple-400 to-indigo-500 text-fill-transparent">Developer</span>
@@ -16,7 +17,7 @@
         You can find my work on <a href="#" class="inline-block cursor-pointer text-gray-800 font-medium ml-1 transition duration-200 hover:text-indigo-600"><i class="fab fa-github mr-1" />GitHub</a> or see my profesional profile on <a href="#" class="cursor-pointer inline-block text-gray-800 font-medium mx-1 transition duration-200 hover:text-red-500"><i class="fab fa-linkedin mr-1" />LinkedIn</a>
       </div>
     </div>
-    <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto" style="z-index: -1"></canvas>
+    <!-- <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto" style="z-index: -1"></canvas> -->
     <div class="container px-6 mx-auto">
       <div class="h-64"></div>
     </div>
