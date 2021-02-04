@@ -29,11 +29,26 @@ $futura: 'Futura';
   font-family: 'Futura';
 }
 
+.roboto {
+  font-family: 'Roboto';
+}
+
+html {
+  // @apply bg-gradient-to-r;
+  // @apply from-indigo-500;
+  // @apply via-purple-400;
+  // @apply to-indigo-500;
+  // @apply min-h-full;
+  // @apply p-2;
+  overflow-x: hidden;
+}
 body {
   @apply bg-white;
   @apply m-0;
   @apply futura;
-  cursor: none;
+  // @apply min-h-full;
+  // @apply rounded-xl;
+  overflow-x: hidden;
 }
 
 
