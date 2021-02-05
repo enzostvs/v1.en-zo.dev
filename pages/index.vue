@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-    <div class="container mx-auto px-6 pt-10 py-10 text-center relative" style="z-index: 1">
-      <div class="bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full w-32 h-32 flex items-center justify-center mx-auto">
-        <img :src="require(`~/assets/images/avatar_${random}.svg`)" class="w-16" alt="Memoji Enzo">
+    <div class="container mx-auto px-6 pt-10 py-10 text-center relative pointer-events-none" style="z-index: 2">
+      <div class="bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full w-32 h-32 flex items-center justify-center mx-auto pointer-events-auto" @mouseover="hover = true" @mouseleave="hover = false">
+        <img :src="require(`~/assets/images/avatar/${random}.svg`)" class="w-16" alt="Memoji Enzo">
       </div>
       <p class="text-2xl font-medium mt-10 mb-5">Hi, I'm Enzo&nbsp;👋</p>
       <p class="text-medium text-gray-600">Site under construction...</p>
@@ -13,13 +13,21 @@
         and
         <span class="bg-clip-text	bg-gradient-to-r from-yellow-500 via-red-400 to-yellow-500 text-fill-transparent">UI Designer</span>
       </h1>
-      <div class="max-w-lg mx-auto text-lg font-normal text-gray-700 roboto text-center tracking-wide mt-3 tracking-wider">
-        You can find my work on <a href="#" class="inline-block cursor-pointer text-gray-800 font-medium ml-1 transition duration-200 hover:text-indigo-600"><i class="fab fa-github mr-1" />GitHub</a> or see my profesional profile on <a href="#" class="cursor-pointer inline-block text-gray-800 font-medium mx-1 transition duration-200 hover:text-red-500"><i class="fab fa-linkedin mr-1" />LinkedIn</a>
+      <div class="text-center mt-6 pointer-events-auto">
+        <a href="https://github.com/enzostvs" target="_blank" class="inline-block roboto transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-full bg-gray-900 hover:bg-gray-800 text-white text-base font-medium mr-4 py-2 px-5 tracking-wide">
+          <i class="fab fa-github mr-2" />/enzostvs
+        </a>
+        <a href="https://www.linkedin.com/in/e-esteves/" target="_blank" class="inline-block roboto transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-full bg-blue-700 hover:bg-blue-600 text-white text-base font-medium mr-4 py-2 px-5 tracking-wide">
+          <i class="fab fa-linkedin mr-2" />/eesteves
+        </a>
+        <a href="https://discord.com/users/452475691410128906" target="_blank" class="inline-block roboto transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-full bg-indigo-400 hover:bg-indigo-500 text-white text-base font-medium py-2 px-5 tracking-wide">
+          <i class="fab fa-discord mr-2" />Enzo#0001
+        </a>
       </div>
     </div>
-    <!-- <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto" style="z-index: -1"></canvas> -->
-    <div class="container px-6 mx-auto">
-      <div class="h-64"></div>
+    <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto" style="z-index: 1"></canvas>
+    <div class="px-6 mx-auto">
+      <div class="h-64 bg-"></div>
     </div>
   </div>
 </template>
@@ -28,7 +36,22 @@
 export default {
   data () {
     return {
-      random: Math.floor(Math.random() * 3) + 1
+      random: Math.floor(Math.random() * 4) + 1,
+      hover: false
+    }
+  },
+  watch: {
+    hover: 'resetRandom'
+  },
+  methods: {
+    resetRandom (oldValue, newValue) {
+      if (!newValue) {
+        let number = Math.floor(Math.random() * 4) + 1
+        while (number === this.random) {
+          number = Math.floor(Math.random() * 4) + 1
+        }
+        this.random = Math.floor(Math.random() * 4) + 1
+      }
     }
   }
 }
