@@ -38,15 +38,15 @@ html {
   // @apply from-indigo-500;
   // @apply via-purple-400;
   // @apply to-indigo-500;
-  // @apply min-h-full;
+  @apply h-full;
   // @apply p-2;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 body {
   @apply bg-white;
   @apply m-0;
   @apply futura;
-  // @apply min-h-full;
+  @apply min-h-full;
   // @apply rounded-xl;
   overflow-x: hidden;
 }

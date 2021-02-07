@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="relative z-40">
     <div class="container mx-auto px-6 flex justify-between items-center w-full">
       <div class="flex items-center transform hover:-translate-y-2 transition duration-75 py-5 cursor-pointer">
         <!-- <div class="bg-gradient-to-r from-indigo-500 to-purple-400 w-4 h-4 mr-5 rounded-md" /> -->
