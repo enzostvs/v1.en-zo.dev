@@ -7,7 +7,7 @@
       </div>
       <ul class="flex items-center py-5">
         <li class="mx-5">
-          <a href="#realizations" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200">
+          <a href="#realizations" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200 cursor-not-allowed opacity-50">
             Realizations
           </a>
         </li>
@@ -15,12 +15,12 @@
           Resume
         </li>
         <li class="mx-5">
-          <a href="#services" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200">
+          <a href="#services" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200 cursor-not-allowed opacity-50">
             Services
           </a>
         </li>
         <li class="ml-5">
-          <a href="#contact" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200">
+          <a href="#contact" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200 cursor-not-allowed opacity-50">
             Contact
           </a>
         </li>

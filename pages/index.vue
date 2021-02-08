@@ -25,7 +25,13 @@
         </a>
       </div>
     </div>
-    <!-- <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto mt-10" style="z-index: 1;width: 100vw !important; height: 100vh !important"></canvas> -->
+    <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto mt-10" style="z-index: 1" />
+    <div class="mt-10 px-3 py-10 text-center container mx-auto h-64 relative z-10">
+      <h2 class="text-3xl font-semibold tracking-widest">
+        Realizations
+      </h2>
+      <p class="text-gray-600 text-base">Under construction...</p>
+    </div>
   </div>
 </template>
 
