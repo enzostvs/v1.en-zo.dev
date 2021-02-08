@@ -55,3 +55,29 @@ body {
 .text-fill-transparent {
   -webkit-text-fill-color: transparent;
 }
+
+#burgermenu {
+  #middle, #top, #bottom {
+    @apply transition;
+    @apply duration-500;
+    @apply transform;
+  }
+  
+  &.active {
+    #middle {
+      @apply pointer-events-none;
+      @apply opacity-0;
+      @apply translate-x-20;
+    }
+    #top {
+      @apply rotate-45;
+      @apply translate-y-1;
+      @apply translate-x-1;
+    }
+    #bottom {
+      @apply -rotate-45;
+      --transform-translate-y: 1.35rem;
+      --transform-translate-x: -0.85rem;
+    }
+  }
+}

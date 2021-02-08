@@ -5,7 +5,7 @@
         <!-- <div class="bg-gradient-to-r from-indigo-500 to-purple-400 w-4 h-4 mr-5 rounded-md" /> -->
         <p class="m-0 text-lg font-medium text-gray-900">hello@en-zo</p>
       </div>
-      <ul class="flex items-center py-5">
+      <ul class="md:flex items-center py-5 hidden sm:hidden">
         <li class="mx-5">
           <a href="#realizations" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200 cursor-not-allowed opacity-50">
             Realizations
@@ -25,6 +25,15 @@
           </a>
         </li>
       </ul>
+      <svg id="burgermenu" width="22px" height="31px" viewBox="0 0 52 31" version="1.1" class="sm:block block md:hidden" @click="toggle">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="burger-menu" transform="translate(0.000000, 3.000074)" stroke="#4A5568" stroke-linejoin="bevel" stroke-width="6">
+              <line x1="0.0362187183" y1="0.5" x2="51.4617097" y2="0.5" id="top"></line>
+              <line x1="8" y1="12.9999257" x2="51.425491" y2="12.9999257" id="middle"></line>
+              <line x1="5.68434189e-14" y1="24.9999257" x2="51.425491" y2="24.9999257" id="bottom"></line>
+          </g>
+        </g>
+      </svg>
     </div>
   </nav>
 </template>
@@ -34,6 +43,14 @@ export default {
   methods: {
     resume () {
       window.open('images/en-zo-resume.pdf', '_blank')
+    },
+    toggle () {
+      const svg = document.getElementById('burgermenu')
+      const top = document.getElementById('top')
+      const middle = document.getElementById('middle')
+      const bottom = document.getElementById('bottom')
+      svg.classList.toggle('active')
+
     }
   }
 }
