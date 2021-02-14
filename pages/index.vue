@@ -8,10 +8,10 @@
       <!-- <p class="text-medium text-gray-600">Site under construction...</p> -->
       <h1 class="text-4xl md:text-6xl font-bold md:leading-tight">
         Front-End
-        <span class="bg-clip-text	bg-gradient-to-r from-indigo-500 via-purple-400 to-indigo-500 text-fill-transparent">Developer</span>
+        <span class="bg-clip-text	bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 text-fill-transparent">Developer</span>
         <br />
         and
-        <span class="bg-clip-text	bg-gradient-to-r from-yellow-500 via-red-400 to-yellow-500 text-fill-transparent">UI Designer</span>
+        <span class="bg-clip-text	bg-gradient-to-r from-yellow-300 via-red-400 to-yellow-300 text-fill-transparent">UI Designer</span>
       </h1>
       <div class="flex items-center justify-center mt-8 pointer-events-auto">
         <a href="https://github.com/enzostvs" target="_blank" class="w-10 h-10 flex items-center justify-center roboto transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-full bg-gray-900 hover:bg-gray-800 text-white text-base font-medium mr-4 tracking-wide">
