@@ -31,7 +31,7 @@
         Work experience
       </h2>
       <p class="text-gray-500 text-lg">
-        All my professional experience in development with the used stack.
+        All my professional experience in development w/ the used stack.
       </p>
     </div>
     <div class="work__at">
