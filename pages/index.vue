@@ -54,7 +54,7 @@
             </div>
             <footer class="md:flex-row flex-col border-t border-gray-200 px-8 flex items-center justify-between pt-4 md:pt-6">
               <p class="font-medium text-lg text-gray-700 mb-3 md:mb-0">
-                Stack use
+                Used stack
               </p>
               <div class="flex items-center justify-between w-full md:w-auto">
                 <img v-for="(stack, s) in experience.stacks" :key="s" :src="require(`~/assets/images/stacks/${stack}.svg`)" :alt="stack" class="ml-0 md:ml-5 w-8 h-8">
@@ -85,13 +85,13 @@ export default {
         company: 'Uptoo',
         date: 'December 2016 to Now',
         job: 'Front End Developer',
-        description: 'Création et réalisation de templates email<br />Conception des interfaces utilisateur<br />Développement des applications clientes,<br/>candidates et internes',
+        description: 'Creation of emails templates<br />Design of user interfaces, development of client<br/>candidates and internal applications',
         stacks: ['nuxt', 'nodejs', 'react', 'sass', 'git']
       }, {
         company: 'Simplon',
         date: 'From June 2016 to Dec. 2016',
         job: 'Lead Formator',
-        description: 'Initiation à l’intégration web,<br />création de thème wordpress (vitrine) <br />et les bases du javascript.',
+        description: 'Discovery of web integration and vanilla javascript<br />Use and creation of wordpress themes (showcase)',
         stacks: ['css3', 'bootstrap', 'git', 'js', 'wordpress']
       }]
     }
