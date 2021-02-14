@@ -1,6 +1,6 @@
 <template>
   <nav class="relative z-40">
-    <div class="container mx-auto px-6 flex justify-between items-center w-full">
+    <div class="container max-w-6xl w-full mx-auto px-6 flex justify-between items-center w-full">
       <div class="flex items-center transform hover:-translate-y-2 transition duration-75 py-5 cursor-pointer">
         <!-- <div class="bg-gradient-to-r from-indigo-500 to-purple-400 w-4 h-4 mr-5 rounded-md" /> -->
         <p class="m-0 text-lg font-medium text-gray-900">hello@en-zo</p>
@@ -28,9 +28,9 @@
       <svg id="burgermenu" width="22px" height="31px" viewBox="0 0 52 31" version="1.1" class="sm:block block md:hidden" @click="toggle">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="burger-menu" transform="translate(0.000000, 3.000074)" stroke="#4A5568" stroke-linejoin="bevel" stroke-width="6">
-              <line x1="0.0362187183" y1="0.5" x2="51.4617097" y2="0.5" id="top"></line>
-              <line x1="8" y1="12.9999257" x2="51.425491" y2="12.9999257" id="middle"></line>
-              <line x1="5.68434189e-14" y1="24.9999257" x2="51.425491" y2="24.9999257" id="bottom"></line>
+            <line x1="0.0362187183" y1="0.5" x2="51.4617097" y2="0.5" id="top"></line>
+            <line x1="8" y1="12.9999257" x2="51.425491" y2="12.9999257" id="middle"></line>
+            <line x1="5.68434189e-14" y1="24.9999257" x2="51.425491" y2="24.9999257" id="bottom"></line>
           </g>
         </g>
       </svg>
