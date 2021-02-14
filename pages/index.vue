@@ -40,7 +40,7 @@
           <div v-for="(experience, e) in experiences" :key="e" class="bg-white rounded-2xl py-7 card__custom md:flex md:flex-col justify-between">
             <div>
               <header class="flex-col md:flex-row md:text-left text-center flex items-center px-8 mb-4">
-                <div :class="`bg-${experience.color} rounded-2xl p-2 shadow-lg mb-2 md:mb-0 md:mr-5`">
+                <div :class="`${experience.company === 'Uptoo' ? 'bg-blue-600' : 'bg-red-600'} rounded-2xl p-2 shadow-lg mb-2 md:mb-0 md:mr-5`">
                   <img :src="require(`~/assets/images/${experience.company.toLowerCase()}.svg`)" alt="logo company" :class="`${experience.company === 'Uptoo' ? 'transform translate-y-0.5' : ''} w-9 h-9`">
                 </div>
                 <div>
@@ -83,14 +83,12 @@ export default {
       hover: false,
       experiences: [{
         company: 'Uptoo',
-        color: 'blue-600',
         date: 'December 2016 to Now',
         job: 'Front End Developer',
         description: 'Création et réalisation de templates email<br />Conception des interfaces utilisateur<br />Développement des applications clientes,<br/>candidates et internes',
         stacks: ['nuxt', 'nodejs', 'react', 'sass', 'git']
       }, {
         company: 'Simplon',
-        color: 'red-600',
         date: 'From June 2016 to Dec. 2016',
         job: 'Lead Formator',
         description: 'Initiation à l’intégration web,<br />création de thème wordpress (vitrine) <br />et les bases du javascript.',
