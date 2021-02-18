@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container max-w-6xl w-full mx-auto px-6 pt-10 py-10 text-center relative pointer-events-none" style="z-index: 2">
+    <div id="name" class="container max-w-6xl w-full mx-auto px-6 pt-10 py-10 text-center relative pointer-events-none" style="z-index: 2">
       <div class="bg-gradient-to-r from-blue-200 to-purple-200 rounded-full w-32 h-32 flex items-center justify-center mx-auto pointer-events-auto" @mouseover="hover = true" @mouseleave="hover = false">
         <img :src="require(`~/assets/images/avatar/${random}.svg`)" class="w-16" alt="Memoji Enzo">
       </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto mt-10" style="z-index: 1" />
-    <div class="mt-0 md:mt-20 mb-2 md:mb-6 px-3 py-6 md:py-10 text-center container mx-auto relative z-10">
+    <div class="mt-0 md:mt-16 mb-2 md:mb-6 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
       <h2 class="text-3xl md:text-4xl mb-1 md:mb-2 font-semibold tracking-widest">
         Work experience
       </h2>
@@ -35,8 +35,8 @@
       </p>
     </div>
     <div class="work__at">
-      <div class="container mx-auto px-6 pb-10 max-w-6xl w-full">
-        <div class="grid md:grid-rows-1 gap-10 grid-cols-1 md:grid-cols-2 mb-12">
+      <div class="container mx-auto px-6 max-w-6xl w-full">
+        <div class="grid md:grid-rows-1 gap-10 grid-cols-1 md:grid-cols-2 mb-16">
           <div v-for="(experience, e) in experiences" :key="e" class="bg-white rounded-2xl py-7 card__custom md:flex md:flex-col justify-between">
             <div>
               <header class="flex-col md:flex-row md:text-left text-center flex items-center px-8 mb-4">
@@ -72,6 +72,36 @@
         </div>
       </div>
     </div>
+    <div id="tchat" class="bg-indigo-500 pt-9 md:pt-14">
+      <div class="container mx-auto px-6 max-w-7xl w-full relative z-10 flex items-end justify-between">
+        <img id="man" class="hidden md:block" src="~/assets/images/tchat/character_man.svg" alt="">
+        <div class="px-0 md:px-8 pb-12 md:pb-6 w-full h-full self-start">
+          <div class="message float bg-white shadow-xl rounded-xl bg-gradient-to-b from-white to-indigo-100 relative pt-4 pb-5 pr-6 pl-9 w-full md:w-10/12">
+            <div class="absolute w-10 h-10 bg-white border-4 p-1 border-indigo-500 -top-3 rounded-full -left-3">
+              <img class="w-full" src="~/assets/images/tchat/head_character_man.svg" alt="">
+            </div>
+            <p class="font-medium text-gray-700">@Enzo</p>
+            <p class="text-sm tracking-wider text-gray-500">Hello, I can design application interfaces for you <img class="w-4 inline-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1133px-Sketch_Logo.svg.png" alt="">, and even develop them behind by speaking Javascript <img class="w-4 inline-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt=""></p>
+          </div>
+          <div class="message float delay-1 bg-white shadow-xl text-right rounded-xl bg-gradient-to-b from-white to-indigo-100 relative pt-4 pb-5 pl-6 pr-9 w-full md:w-10/12 mt-6 float-right">
+            <div class="absolute w-10 h-10 bg-white border-4 border-indigo-500 -top-3 rounded-full -right-3">
+              <img class="w-full" src="~/assets/images/tchat/head_character_woman.svg" alt="">
+            </div>
+            <p class="font-medium text-gray-700">@Chloé</p>
+            <p class="text-sm tracking-wider text-gray-500">Great&nbsp;! We are looking for someone with a front-end profile and strong UI appetence&nbsp;!</p>
+          </div>
+        </div>
+        <img id="woman" class="hidden md:block" src="~/assets/images/tchat/character_woman.svg" alt="">
+      </div>
+    </div>
+    <div class="mt-10 mb-2 px-6 py-6 md:py-10 text-center container mx-auto relative z-10 h-screen">
+      <h2 class="text-3xl md:text-4xl mb-1 md:mb-2 font-semibold tracking-widest">
+        Personal project
+      </h2>
+      <p class="text-gray-500 text-lg">
+        In my free time I take part in projects (website, library & others).
+      </p>
+    </div>
   </div>
 </template>
 
@@ -98,6 +128,31 @@ export default {
   },
   watch: {
     hover: 'resetRandom'
+  },
+  mounted () {
+    const man = this.$scrollmagic.scene({
+      triggerElement: '#tchat',
+      triggerHook: 1,
+      duration: '80%'
+    }).setTween('#man', { 
+      css: { 
+        opacity: 1, 
+        transform: 'translateX(0)'
+      }
+    })
+    const woman = this.$scrollmagic.scene({
+      triggerElement: '#tchat',
+      triggerHook: 1,
+      duration: '80%',
+      delay: 3
+    }).setTween('#woman', { 
+      css: { 
+        opacity: 1, 
+        transform: 'translateX(0)'
+      }
+    })
+    this.$scrollmagic.addScene(man)
+    this.$scrollmagic.addScene(woman)
   },
   methods: {
     resetRandom (oldValue, newValue) {
