@@ -1,18 +1,25 @@
 <template>
   <div>
-    <div id="name" class="container max-w-6xl w-full mx-auto px-6 pt-10 py-10 text-center relative pointer-events-none" style="z-index: 2">
+    <div class="container max-w-6xl w-full mx-auto px-6 pt-10 py-10 text-center relative pointer-events-none" style="z-index: 2">
       <div class="bg-gradient-to-r from-blue-200 to-purple-200 rounded-full w-32 h-32 flex items-center justify-center mx-auto pointer-events-auto" @mouseover="hover = true" @mouseleave="hover = false">
         <img :src="require(`~/assets/images/avatar/${random}.svg`)" class="w-16" alt="Memoji Enzo">
       </div>
       <p class="text-2xl font-medium mt-10 mb-5">Hi, I'm Enzo&nbsp;👋</p>
       <!-- <p class="text-medium text-gray-600">Site under construction...</p> -->
-      <h1 class="text-4xl md:text-6xl font-bold md:leading-tight">
-        Front-End
-        <span class="bg-clip-text	bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 text-fill-transparent">Developer</span>
-        <br />
-        and
-        <span class="bg-clip-text	bg-gradient-to-r from-yellow-300 via-red-400 to-yellow-300 text-fill-transparent">UI Designer</span>
-      </h1>
+      <div class="heading inline-block">
+        <h1 class="text-4xl md:text-6xl font-bold md:leading-tight">
+          <span id="heading__dev" class="cut__text">
+            Front-End
+            <span class="bg-clip-text	bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 text-fill-transparent">Developer</span>
+          </span>
+        </h1>
+         <h1 class="text-4xl md:text-6xl font-bold md:leading-tight">
+          <span id="heading__design" class="cut__text">
+            and
+            <span class="bg-clip-text	bg-gradient-to-r from-yellow-300 via-red-400 to-yellow-300 text-fill-transparent">UI Designer</span>
+          </span>
+        </h1>
+      </div>
       <div class="flex items-center justify-center mt-8 pointer-events-auto">
         <a href="https://github.com/enzostvs" target="_blank" class="w-10 h-10 flex items-center justify-center roboto transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-full bg-gray-900 hover:bg-gray-800 text-white text-base font-medium mr-4 tracking-wide">
           <i class="fab fa-github text-lg" />
@@ -26,7 +33,7 @@
       </div>
     </div>
     <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto mt-10" style="z-index: 1" />
-    <div class="mt-0 md:mt-16 mb-2 md:mb-6 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
+    <div class="mt-0 md:mt-5 mb-2 md:mb-6 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
       <h2 class="text-3xl md:text-4xl mb-1 md:mb-2 font-semibold tracking-widest">
         Work experience
       </h2>
@@ -106,6 +113,8 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
   data () {
     return {
@@ -130,6 +139,7 @@ export default {
     hover: 'resetRandom'
   },
   mounted () {
+    this.startAnimations()
     const man = this.$scrollmagic.scene({
       triggerElement: '#tchat',
       triggerHook: 1,
@@ -155,6 +165,13 @@ export default {
     this.$scrollmagic.addScene(woman)
   },
   methods: {
+    startAnimations () {
+      const tl = gsap.timeline({ defaults: { ease: 'SlowMo.easeOut' } })
+      tl.to('#heading__dev', { y: '0%', duration: .7, stagger: .2 })
+      tl.to('#heading__design', { y: '0%', duration: .7, stagger: .4 })
+      tl.to('#canvas3d', { opacity: 1, duration: .7, stagger: .6 })
+      // gsap.to('#title', { duration: 1, color: 'red' })
+    },
     resetRandom (oldValue, newValue) {
       if (!newValue) {
         let number = Math.floor(Math.random() * 4) + 1

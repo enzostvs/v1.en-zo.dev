@@ -135,3 +135,18 @@ body {
 	}
 }
 
+#canvas3d {
+  @apply opacity-0;
+}
+
+.heading {
+  h1 {
+    @apply bg-white;
+    @apply overflow-hidden;
+    .cut__text {
+      @apply inline-block;
+      @apply transform;
+      @apply translate-y-full;
+    }
+  }
+}
