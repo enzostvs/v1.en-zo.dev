@@ -2,7 +2,7 @@
   <div>
     <div class="container max-w-6xl w-full mx-auto px-6 pt-10 py-10 text-center relative pointer-events-none" style="z-index: 2">
       <div class="bg-gradient-to-r from-blue-200 to-purple-200 rounded-full w-32 h-32 flex items-center justify-center mx-auto pointer-events-auto" @mouseover="hover = true" @mouseleave="hover = false">
-        <img :src="require(`~/assets/images/avatar/${random}.svg`)" class="w-16" alt="Memoji Enzo">
+        <img width="64" height="64px" :src="require(`~/assets/images/avatar/${random}.svg`)" class="w-16" alt="Memoji Enzo">
       </div>
       <p class="text-2xl font-medium mt-10 mb-5">Hi, I'm Enzo&nbsp;👋</p>
       <!-- <p class="text-medium text-gray-600">Site under construction...</p> -->
@@ -101,13 +101,16 @@
         <img id="woman" class="hidden md:block" src="~/assets/images/tchat/character_woman.svg" alt="">
       </div>
     </div>
-    <div class="mt-10 mb-2 px-6 py-6 md:py-10 text-center container mx-auto relative z-10 h-screen">
+    <div class="mt-10 mb-2 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
       <h2 class="text-3xl md:text-4xl mb-1 md:mb-2 font-semibold tracking-widest">
         Personal project
       </h2>
       <p class="text-gray-500 text-lg">
         In my free time I take part in projects (website, library & others).
       </p>
+      <div class="mt-12 text-center">
+        <img class="max-w-2xl w-full mx-auto" src="~/assets/images/wip.png" alt="Under construction">
+      </div>
     </div>
   </div>
 </template>
@@ -144,7 +147,8 @@ export default {
       triggerElement: '#tchat',
       triggerHook: 1,
       duration: '80%'
-    }).setTween('#man', { 
+    })
+    .setTween('#man', { 
       css: { 
         opacity: 1, 
         transform: 'translateX(0)'
