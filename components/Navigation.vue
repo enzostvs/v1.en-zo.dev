@@ -67,16 +67,16 @@ export default {
       this.menu = !this.menu
       if (this.menu) {
         const tl = gsap.timeline({ defaults: { ease: 'SlowMo.easeOut' } })
-        tl.to('#navigation-logo__1', { y: '100%', duration: .7, stagger: .2 })
-        tl.to('#navigation-logo__1', { display: 'none', stagger: .7 })
-        tl.to('#navigation-logo__2', { display: 'inline-block', stagger: .7 })
-        tl.to('#navigation-logo__2', { y: '0%', duration: .7, stagger: .7 })
+        tl.to('#navigation-logo__1', { y: '100%', duration: .7 })
+        tl.to('#navigation-logo__1', { display: 'none' })
+        tl.to('#navigation-logo__2', { display: 'inline-block' })
+        tl.to('#navigation-logo__2', { y: '0%', duration: .7 })
       } else {
         const tl = gsap.timeline({ defaults: { ease: 'SlowMo.easeOut' } })
-        tl.to('#navigation-logo__2', { y: '100%', duration: .7, stagger: .2 })
-        tl.to('#navigation-logo__2', { display: 'none', stagger: .7 })
-        tl.to('#navigation-logo__1', { display: 'inline-block', stagger: .7 })
-        tl.to('#navigation-logo__1', { y: '0%', duration: .7, stagger: .7 })
+        tl.to('#navigation-logo__2', { y: '100%', duration: .7 })
+        tl.to('#navigation-logo__2', { display: 'none' })
+        tl.to('#navigation-logo__1', { display: 'inline-block' })
+        tl.to('#navigation-logo__1', { y: '0%', duration: .7 })
       }
     }
   }
