@@ -39,28 +39,28 @@
         </svg>
       </div>
     </nav>
-    <div :class="{ 'opacity-100 pointer-events-auto': menu, 'opacity-0 pointer-events-none': !menu }" class="h-screen w-screen transition duration-500 bg-white absolute z-30 right-0 top-0">
+    <div :class="{ 'opacity-100 pointer-events-auto': menu, 'opacity-0 pointer-events-none': !menu }" class="h-screen w-screen transition duration-500 bg-white fixed z-30 right-0 top-0">
       <div class="px-6 py-20">
         <div class="w-full relative text-white overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-purple-500 to-indigo-500 p-6 mb-6" @click="resume">
           <h2 class="text-xl font-semibold mb-1 text-shadow">Resume</h2>
           <p class="font-light text-violet-100 text-shadow mb-3">Download now to keep it close to you ;-)</p>
           <a class="mt-auto bg-indigo-800 bg-opacity-50 relative z-10 hover:bg-opacity-75 transition-colors duration-200 rounded-xl font-semibold py-2 px-4 inline-flex">View resume</a>
-          <img src="~/assets/images/menus/resume.svg" alt="Resume icon" class="w-44 absolute -bottom-12 -right-12 md:static overflow-visible">
+          <img width="64" height="64px" src="~/assets/images/menus/resume.svg" alt="Resume icon" class="w-44 absolute -bottom-12 -right-12 md:static overflow-visible">
           <div class="absolute bottom-0 left-0 right-0 h-20" style="background: linear-gradient(to top, rgb(135, 94, 245), rgba(135, 94, 245, 0));" />
         </div>
         <div class="w-full relative text-white overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-gray-300 to-gray-500 p-6 mb-6">
           <h2 class="text-xl font-semibold mb-1 text-shadow">Projects</h2>
           <p class="font-light text-violet-100 text-shadow mb-3">Coming soon :o !</p>
           <a class="mt-auto bg-gray-600 bg-opacity-50 relative z-10 transition-colors duration-200 rounded-xl font-semibold py-2 px-4 inline-flex">View realizations</a>
-          <img src="~/assets/images/menus/projects.svg" alt="Resume icon" class="w-36 absolute -bottom-12 -right-8 md:static overflow-visible" style="filter: grayscale(1);">
-          <div class="absolute bottom-0 left-0 right-0 h-20" style="background: linear-gradient(to top, rgb(116 126 136), rgba(135, 94, 245, 0));" />
+          <img width="64" height="64px" src="~/assets/images/menus/projects.svg" alt="Resume icon" class="w-36 absolute -bottom-12 -right-8 md:static overflow-visible" style="filter: grayscale(1);">
+          <div class="absolute bottom-0 left-0 right-0 h-20" style="background: linear-gradient(to top, rgb(116 126 136), rgba(116, 126, 136, 0))" />
         </div>
         <div class="w-full relative text-white overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-gray-300 to-gray-500 p-6">
           <h2 class="text-xl font-semibold mb-1 text-shadow">Contact</h2>
           <p class="font-light text-violet-100 text-shadow mb-3">Coming soon :o !</p>
           <a class="mt-auto bg-gray-600 bg-opacity-50 relative z-10 transition-colors duration-200 rounded-xl font-semibold py-2 px-4 inline-flex">View realizations</a>
-          <img src="~/assets/images/menus/contact.svg" alt="Resume icon" class="w-16 absolute -bottom-12 right-6 md:static overflow-visible" style="filter: grayscale(1);">
-          <div class="absolute bottom-0 left-0 right-0 h-20" style="background: linear-gradient(to top, rgb(116 126 136), rgba(135, 94, 245, 0));" />
+          <img width="64" height="64px" src="~/assets/images/menus/contact.svg" alt="Resume icon" class="w-16 absolute -bottom-12 right-6 md:static overflow-visible" style="filter: grayscale(1);">
+          <div class="absolute bottom-0 left-0 right-0 h-20" style="background: linear-gradient(to top, rgb(116 126 136), rgba(116, 126, 136, 0))" />
         </div>
       </div>
     </div>
@@ -83,6 +83,7 @@ export default {
     toggle () {
       const svg = document.getElementById('burgermenu')
       svg.classList.toggle('active')
+      document.body.classList.toggle('overflow-hidden')
       this.menu = !this.menu
       if (this.menu) {
         const tl = gsap.timeline({ defaults: { ease: 'SlowMo.easeOut' } })

@@ -48,7 +48,7 @@
             <div>
               <header class="flex-col md:flex-row md:text-left text-center flex items-center px-8 mb-4">
                 <div :class="`${experience.company === 'Uptoo' ? 'bg-blue-600' : 'bg-red-600'} rounded-2xl p-2 shadow-lg mb-2 md:mb-0 md:mr-5`">
-                  <img :src="require(`~/assets/images/${experience.company.toLowerCase()}.svg`)" alt="logo company" :class="`${experience.company === 'Uptoo' ? 'transform translate-y-0.5' : ''} w-9 h-9`">
+                  <img width="64" height="64px" :src="require(`~/assets/images/${experience.company.toLowerCase()}.svg`)" alt="logo company" :class="`${experience.company === 'Uptoo' ? 'transform translate-y-0.5' : ''} w-9 h-9`">
                 </div>
                 <div>
                   <p class="text-base text-gray-500 leading-6">{{ experience.date }}</p>
@@ -64,7 +64,7 @@
                 Used stack
               </p>
               <div class="flex items-center justify-between w-full md:w-auto">
-                <img v-for="(stack, s) in experience.stacks" :key="s" :src="require(`~/assets/images/stacks/${stack}.svg`)" :alt="stack" class="ml-0 md:ml-5 w-8 h-8">
+                <img width="64" height="64px" v-for="(stack, s) in experience.stacks" :key="s" :src="require(`~/assets/images/stacks/${stack}.svg`)" :alt="stack" class="ml-0 md:ml-5 w-8 h-8">
               </div>
             </footer>
           </div>
@@ -81,24 +81,24 @@
     </div>
     <div id="tchat" class="bg-indigo-500 pt-9 md:pt-14">
       <div class="container mx-auto px-6 max-w-7xl w-full relative z-10 flex items-end justify-between">
-        <img id="man" class="hidden md:block" src="~/assets/images/tchat/character_man.svg" alt="">
+        <img width="64" height="64px" id="man" class="hidden md:block" src="~/assets/images/tchat/character_man.svg" alt="">
         <div class="px-0 md:px-8 pb-12 md:pb-6 w-full h-full self-start">
           <div class="message float bg-white shadow-xl rounded-xl bg-gradient-to-b from-white to-indigo-100 relative pt-4 pb-5 pr-6 pl-9 w-full md:w-10/12">
             <div class="absolute w-10 h-10 bg-white border-4 p-1 border-indigo-500 -top-3 rounded-full -left-3">
-              <img class="w-full" src="~/assets/images/tchat/head_character_man.svg" alt="">
+              <img width="64" height="64px" class="w-full" src="~/assets/images/tchat/head_character_man.svg" alt="">
             </div>
             <p class="font-medium text-gray-700">@Enzo</p>
-            <p class="text-sm tracking-wider text-gray-500">Hello, I can design application interfaces for you <img class="w-4 inline-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1133px-Sketch_Logo.svg.png" alt="">, and even develop them behind by speaking Javascript <img class="w-4 inline-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt=""></p>
+            <p class="text-sm tracking-wider text-gray-500">Hello, I can design application interfaces for you <img width="64px" height="64px" class="w-4 inline-block" src="~/assets/images/stacks/sketch.svg" alt="">, and even develop them behind by speaking Javascript <img width="64px" height="64px" class="w-4 inline-block" src="~/assets/images/stacks/js.svg" alt=""></p>
           </div>
           <div class="message float delay-1 bg-white shadow-xl text-right rounded-xl bg-gradient-to-b from-white to-indigo-100 relative pt-4 pb-5 pl-6 pr-9 w-full md:w-10/12 mt-6 float-right">
             <div class="absolute w-10 h-10 bg-white border-4 border-indigo-500 -top-3 rounded-full -right-3">
-              <img class="w-full" src="~/assets/images/tchat/head_character_woman.svg" alt="">
+              <img width="64" height="64px" class="w-full" src="~/assets/images/tchat/head_character_woman.svg" alt="">
             </div>
             <p class="font-medium text-gray-700">@Chloé</p>
             <p class="text-sm tracking-wider text-gray-500">Great&nbsp;! We are looking for someone with a front-end profile and strong UI appetence&nbsp;!</p>
           </div>
         </div>
-        <img id="woman" class="hidden md:block" src="~/assets/images/tchat/character_woman.svg" alt="">
+        <img width="64" height="64px" id="woman" class="hidden md:block" src="~/assets/images/tchat/character_woman.svg" alt="">
       </div>
     </div>
     <div id="projects" class="mt-10 mb-2 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
