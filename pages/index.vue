@@ -101,7 +101,7 @@
         <img id="woman" class="hidden md:block" src="~/assets/images/tchat/character_woman.svg" alt="">
       </div>
     </div>
-    <div class="mt-10 mb-2 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
+    <div id="projects" class="mt-10 mb-2 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
       <h2 class="text-3xl md:text-4xl mb-1 md:mb-2 font-semibold tracking-widest">
         Personal project
       </h2>

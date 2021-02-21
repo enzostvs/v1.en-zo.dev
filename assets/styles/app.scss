@@ -39,6 +39,7 @@ html {
   // @apply via-purple-400;
   // @apply to-indigo-500;
   @apply h-full;
+  scroll-behavior: smooth;
   // @apply p-2;
   // overflow-x: hidden;
 }
@@ -49,6 +50,7 @@ body {
   @apply min-h-full;
   // @apply rounded-xl;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 

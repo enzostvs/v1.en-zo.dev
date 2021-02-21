@@ -15,7 +15,7 @@
         </div>
         <ul class="md:flex items-center py-5 hidden sm:hidden">
           <li class="mx-5">
-            <a href="#projects" class="font-normal text-gray-700 transition duration-200 cursor-not-allowed opacity-50">
+            <a href="#projects" class="font-normal text-gray-700 hover:text-indigo-500 transition duration-200 cursor-pointer">
               Projects
             </a>
           </li>
