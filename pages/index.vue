@@ -6,7 +6,7 @@
       </div>
       <p class="text-2xl font-medium mt-10 mb-5">Hi, I'm Enzo&nbsp;👋</p>
       <!-- <p class="text-medium text-gray-600">Site under construction...</p> -->
-      <div class="heading inline-block">
+      <div id="heading" class="inline-block">
         <h1 class="text-4xl md:text-6xl font-bold md:leading-tight">
           <span id="heading__dev" class="cut__text">
             Front-End

@@ -140,15 +140,38 @@ body {
 #canvas3d {
   @apply opacity-0;
 }
-
-.heading {
+@mixin cut__text {
+  @apply inline-block;
+  @apply transform;
+  @apply translate-y-full;
+}
+@mixin inverse__cut__text {
+  @apply inline-block;
+  @apply transform;
+  @apply translate-y-0;
+}
+#heading {
   h1 {
     @apply bg-white;
     @apply overflow-hidden;
     .cut__text {
-      @apply inline-block;
-      @apply transform;
-      @apply translate-y-full;
+      @include cut__text;
+    }
+  }
+}
+
+#navigation-logo {
+  p {
+    @apply bg-white;
+    @apply overflow-hidden;
+    .inverse__cut__text {
+      @include inverse__cut__text;
+      &.hidden {
+        display: none;
+      }
+    }
+    .cut__text {
+      @include cut__text;
     }
   }
 }
