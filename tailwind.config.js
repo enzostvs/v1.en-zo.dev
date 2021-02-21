@@ -9,7 +9,8 @@ module.exports = {
       position: ['group-hover'],
       translate: ['group-hover'],
       ringWidth: ['hover'],
-      ringColor: ['hover']
+      ringColor: ['hover'],
+      width: ['hover']
     }
   },
   plugins: [],

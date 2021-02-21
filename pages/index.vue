@@ -32,7 +32,7 @@
         </a>
       </div>
     </div>
-    <canvas id="canvas3d" class="absolute top-0 left-0 mx-auto mt-10" style="z-index: 1" />
+    <canvas id="canvas3d" class="hidden sm:block absolute top-0 left-0 mx-auto mt-10" style="z-index: 1" />
     <div class="mt-0 md:mt-5 mb-2 md:mb-6 px-6 py-6 md:py-10 text-center container mx-auto relative z-10">
       <h2 class="text-3xl md:text-4xl mb-1 md:mb-2 font-semibold tracking-widest">
         Work experience
