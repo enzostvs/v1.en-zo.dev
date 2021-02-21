@@ -71,7 +71,7 @@ import { gsap } from 'gsap'
 export default {
   data () {
     return {
-      menu: true
+      menu: false
     }
   },
   methods: {
