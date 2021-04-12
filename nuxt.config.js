@@ -15,6 +15,7 @@ export default {
       { hid: 'twitter:image', name: 'twitter:image', content: 'https://en-zo.dev/share.png' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'en-zo | welcome to my portfolio' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'theme-color', name: 'theme-color', content: '#7289DA'},
       { hid: 'twitter:description', name: 'twitter:description', content: 'Hi ! I\'m Enzo ! 👋\nIf you would like to know more about my profile or my current projects, please go directly to my website.' },
       { hid: 'description', name: 'description', content: 'Hi ! I\'m Enzo ! 👋\nFront-End Developer and UI Designer.' }
     ],
